@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BURFAT GOOGLE</title>
+    <style>
+        body { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; }
+        input { width: 300px; padding: 10px; }
+        button { padding: 10px 20px; }
+        body {
+            
+            background: linear-gradient(to right, #625fff, #070bec , #702bec , #0004ff , #7577e0); /* Left to Right to up Gradient */
+            color: white;
+        }
+        h1 {
+            font-size: 80px;
+        }
+        input {
+            border-radius: 20px;
+            height: 20px;
+            width: 500px;
+        }
+        button {
+            background-clip: border-box;
+        }
+    </style>
+</head>
+<body>
+    <h1> <i>BURFAT</i>
+        <br>
+        <i>Google</i> </h1>
+    <input type="text" id="searchInput" placeholder="Search...">
+    <button onclick="performSearch()">Search</button>
+
+    <script>
+        function performSearch() {
+            const query = document.getElementById('searchInput').value;
+            const url = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
